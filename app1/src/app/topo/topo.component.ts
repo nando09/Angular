@@ -18,5 +18,5 @@ import { Component } from '@angular/core'
 	// styles : [`.exemplo{ color:red }`]
 })
 export class TopoComponent {
-
+	public titulo = "Aprendendo Inglês";
 }

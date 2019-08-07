@@ -8,7 +8,6 @@ import { TentativasComponent } from './tentativas/tentativas.component';
 import { ProgressoComponent } from './progresso/progresso.component'
 
 @NgModule({
-  // Tem que declarar o novo componente aqui no declarations
   declarations: [
     AppComponent,
     TopoComponent,
