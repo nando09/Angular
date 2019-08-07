@@ -1,0 +1,33 @@
+// INSTALA O TYPESCRIPT NA MAQUINA
+npm install -g typescript
+
+// INICIA UM ARQUIVO DE JSON
+tsc -init
+
+// PARA ASSISTIR O .ts E TRANSFORMA-LO EM .js
+tsc -w
+
+// tsconfig.json  "outDir": e mandar o emulador para tal canto
+
+
+
+
+
+
+
+// ANGULAR
+ng new nome_do_projeto			=>	Instalando os recursos para o desenvolvimento do projeto
+
+ng serve				=>	Inicia o projeto no browser
+
+ng generate component painel		=>	Criando um component via cli com o terminal, passando o nome do component que ira ser o painel
+OU
+ng g c painel				=>	Significa o mesmo que ng generate component painel
+	 --spec=false			=>	Passando o false para --spec o arquivo de teste não é criado
+
+
+
+
+
+
+
