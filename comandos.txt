@@ -25,6 +25,9 @@ OU
 ng g c painel				=>	Significa o mesmo que ng generate component painel
 	 --spec=false			=>	Passando o false para --spec o arquivo de teste não é criado
 
+ng build				=>	Gerando um Build de desenvolvimento
+OU
+ng build --dev				=>	Gerando um Build de desenvolvimento
 
 
 

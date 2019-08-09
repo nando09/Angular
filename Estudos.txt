@@ -1,0 +1,2 @@
+// Metodos já pre definidos do Angular
+https://angular.io/guide/lifecycle-hooks
