@@ -29,8 +29,10 @@ ng build				=>	Gerando um Build de desenvolvimento
 OU
 ng build --dev				=>	Gerando um Build de desenvolvimento
 
+ng build --prod				=>	Build de produção
 
-
+npm install http-server@0.9.0 -g		=>	Instalar o http-server
+http-server					=>	Para usar o elemento
 
 
 
