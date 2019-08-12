@@ -1,2 +1,5 @@
 // Metodos já pre definidos do Angular
 https://angular.io/guide/lifecycle-hooks
+
+// Comandos para Angular
+https://github.com/angular/angular-cli/wiki
