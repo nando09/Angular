@@ -59,7 +59,7 @@ export class OfertasService {
 	public getOfertas2(): Promise<Oferta[]> {
 		return new Promise((resolve, reject) => {
 			// Algum tipo de processamento, que chama a funcao resolve ou reject
-			
+			resolve(this.ofertas)
 		})
 	}
 }
