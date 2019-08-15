@@ -34,5 +34,7 @@ ng build --prod				=>	Build de produção
 npm install http-server@0.9.0 -g		=>	Instalar o http-server
 http-server					=>	Para usar o elemento
 
+npm install -g json-server		=>	Instalar o json-server para teste
+json-server --watch banco-de-dados.json	=>	Para assistir o Json
 
 
