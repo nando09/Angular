@@ -11,4 +11,5 @@ export const ROUTES: Routes = [
 	{ path: 'diversao', component: DiversaoComponent },
 	{ path: 'oferta', component: HomeComponent },
 	{ path: 'oferta/:id', component: OfertaComponent },
+	// { path: 'oferta/:id/:sub', component: OfertaComponent },
 ]
