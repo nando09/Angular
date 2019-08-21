@@ -35,8 +35,14 @@ export class OfertasService {
 			.then((resposta: any) => resposta.shift())
 	}
 
-	public getComoUsarId(id: number): Promisse<string>{
+	public getComoUsarId(id: number): Promise<string>{
 		return this.http.get(`${URL_API}/como-usar?id=${id}`)
+		.toPromise()
+		.then((resposta: any) => resposta[0].descricao)
+	}
+
+	public getOndeFicaId(id: number): Promise<string>{
+		return this.http.get(`${URL_API}/onde-fica?id=${id}`)
 		.toPromise()
 		.then((resposta: any) => resposta[0].descricao)
 	}
