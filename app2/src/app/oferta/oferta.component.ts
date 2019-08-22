@@ -1,14 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
-import { OfertasService } from '../ofertas.service'
 import { Oferta } from '../shared/oferta.model'
-import { Observable } from 'rxjs'
-import { Observer } from 'rxjs'
-import { interval } from 'rxjs'
-import { Subscription } from 'rxjs'
-
-// import 'rxjs/Rx'
-// import 'rxjs/add/observable/interval'
+import { OfertasService } from '../ofertas.service'
+// import { Observable } from 'rxjs'
+// import { Observer } from 'rxjs'
+// import { interval } from 'rxjs'
+// import { Subscription } from 'rxjs'
 
 
 @Component({
@@ -51,28 +48,28 @@ export class OfertaComponent implements OnInit, OnDestroy {
 
 
 
-		let tempo = interval(2000)
+		// let tempo = interval(2000)
 
-		this.tempoObservableSubscription = tempo.subscribe((intervalo: number) => {
-			console.log(intervalo)
-		})
+		// this.tempoObservableSubscription = tempo.subscribe((intervalo: number) => {
+		// 	console.log(intervalo)
+		// })
 
 
-		// Observavel
-		let meuObservableTeste = Observable.create((observer: Observer<string>) => {
-			observer.next('Primeiro evento da stream')
-			observer.next('Segundo evento da stream')
-			observer.complete()
-			observer.next('Segundo evento da stream')
-			observer.error('Algum erro foi achado na stream de event!')
-		});
+		// // Observavel
+		// let meuObservableTeste = Observable.create((observer: Observer<string>) => {
+		// 	observer.next('Primeiro evento da stream')
+		// 	observer.next('Segundo evento da stream')
+		// 	observer.complete()
+		// 	observer.next('Segundo evento da stream')
+		// 	observer.error('Algum erro foi achado na stream de event!')
+		// });
 
-		// Observador
-		this.meuObservableTesteSubscrition = meuObservableTeste.subscribe(
-			(resultado: string) => console.log(resultado),
-			(Error: string) => console.log(Error),
-			() => console.log('Processamento foi classificado como concluido!')
-		)
+		// // Observador
+		// this.meuObservableTesteSubscrition = meuObservableTeste.subscribe(
+		// 	(resultado: string) => console.log(resultado),
+		// 	(Error: string) => console.log(Error),
+		// 	() => console.log('Processamento foi classificado como concluido!')
+		// )
 
 	}
 
