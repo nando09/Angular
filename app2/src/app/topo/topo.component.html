@@ -14,9 +14,12 @@
 						#termoDePesquisa
 						(keyup)="pesquisa(termoDePesquisa.value)"
 					/>
+					<ul class="list-group">
+						<li class="list-group-item" *ngFor="let oferta of ofertas2">{{ oferta.titulo | descricaoReduzida:15 | uppercase }}</li>
+					</ul>
 				</div>
 				<div class="col-md-2">
-					<a a href="#"><img src="/assets/carrinho.png" /></a>			
+					<a a href="#"><img src="/assets/carrinho.png" /></a>
 				</div>
 			</div>
 		</div>

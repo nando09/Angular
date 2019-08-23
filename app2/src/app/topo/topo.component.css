@@ -30,3 +30,7 @@
 .navbar{
 	background: white;
 }
+
+.list-group{
+	position: absolute;
+}
