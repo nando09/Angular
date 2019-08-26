@@ -1,11 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Params } from '@angular/router'
 import { Oferta } from '../shared/oferta.model'
 import { OfertasService } from '../ofertas.service'
 // import { Observable } from 'rxjs'
 // import { Observer } from 'rxjs'
 // import { interval } from 'rxjs'
-// import { Subscription } from 'rxjs'
+import { Subscription } from 'rxjs'
 
 
 @Component({
@@ -24,6 +24,16 @@ export class OfertaComponent implements OnInit, OnDestroy {
 	constructor(private route: ActivatedRoute, private ofertasService: OfertasService) { }
 
 	ngOnInit() {
+
+		this.route.params.subscribe((parametros: Params) => {
+			this.ofertasService.getOfertaId(parametros.id)
+				.then(( oferta: Oferta ) => {
+					this.oferta = oferta
+					// console.log(this.oferta)
+				})
+		})
+
+
 		// // snapshot
 		// console.log('Aqui e params: ', this.route.snapshot.params['id'])
 
@@ -32,7 +42,7 @@ export class OfertaComponent implements OnInit, OnDestroy {
 		// 	console.log(parametro.sub)
 		// 	console.log(parametro.id)
 		// })
-		
+
 		this.ofertasService.getOfertaId(this.route.snapshot.params['id'])
 			.then(( oferta: Oferta ) => {
 				this.oferta = oferta
@@ -74,8 +84,8 @@ export class OfertaComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnDestroy() {
-		this.meuObservableTesteSubscrition.unsubscribe()
-		this.tempoObservableSubscription.unsubscribe()
+		this.meuObservableTesteSubscrition
+		this.tempoObservableSubscription
 	}
 
 }

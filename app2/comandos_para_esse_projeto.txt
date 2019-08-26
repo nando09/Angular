@@ -1,1 +1,4 @@
 npm install --save intl
+
+npm uninstall tether
+npm install popper.js --save
