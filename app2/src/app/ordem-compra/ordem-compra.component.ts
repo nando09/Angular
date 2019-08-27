@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { OrdemCompraService } from '../ordem-compra.service'
+import { Pedido } from '../shared/pedido.model'
 
 @Component({
 	selector: 'app-ordem-compra',
 	templateUrl: './ordem-compra.component.html',
-	styleUrls: ['./ordem-compra.component.css']
+	styleUrls: ['./ordem-compra.component.css'],
+	providers: [ OrdemCompraService ]
 })
 export class OrdemCompraComponent implements OnInit {
 
@@ -23,9 +26,16 @@ export class OrdemCompraComponent implements OnInit {
 	public complementoPrimitivo: boolean = true
 	public formPagPrimitivo: boolean = true
 
-	constructor() { }
+	//Controlar botão confirmar
+	public formEstado: string = 'disabled'
+
+	// Pedido
+	public pedido: Pedido = new Pedido('','','','')
+
+	constructor(private ordemCompraService: OrdemCompraService) { }
 
 	ngOnInit() {
+		// this.ordemCompraService.efetivarCompra()
 	}
 
 	public atualizaEndereco(endereco: string): void{
@@ -38,6 +48,7 @@ export class OrdemCompraComponent implements OnInit {
 		}else{
 			this.enderecoValidar = false
 		}
+		this.habilitaForm()
 	}
 
 	public atualizaNumero(numero: string): void{
@@ -50,6 +61,7 @@ export class OrdemCompraComponent implements OnInit {
 		}else{
 			this.numeroValidar = false
 		}
+		this.habilitaForm()
 	}
 
 	public atualizaComplemento(complemento: string): void{
@@ -62,6 +74,7 @@ export class OrdemCompraComponent implements OnInit {
 		}else{
 			this.complementoValidar = false
 		}
+		this.habilitaForm()
 	}
 
 	public atualizaFormPag(formPag: string): void{
@@ -74,6 +87,24 @@ export class OrdemCompraComponent implements OnInit {
 		}else{
 			this.formPagValidar = false
 		}
+		this.habilitaForm()
+	}
+
+	public habilitaForm():void{
+		if (this.enderecoValidar === true && this.numeroValidar === true && this.formPagValidar === true) {
+			this.formEstado = ''
+		}else{
+			this.formEstado = 'disabled'
+		}
+	}
+
+	public confirmaCompra(): void{
+		this.pedido.endereco = this.endereco
+		this.pedido.numero = this.numero
+		this.pedido.complemento = this.complemento
+		this.pedido.formPag = this.formPag
+
+		this.ordemCompraService.efetivarCompra(this.pedido)
 	}
 
 
