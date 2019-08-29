@@ -6,3 +6,7 @@ https://github.com/angular/angular-cli/wiki
 
 // Planos
 https://www.ameplansaude.com.br/
+
+
+
+https://www.devmedia.com.br/aquecendo-no-lazy-load/38512
