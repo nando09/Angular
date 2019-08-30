@@ -1,0 +1,7 @@
+/*******	lifecycle hook		*******/
+
+ngOnInit() 		=>			https://angular.io/guide/lifecycle-hooks#oninit
+
+[(ngModel)]		=>		https://angular.io/api/forms/NgModel
+	Nos campo de input que você a chama para ter uma ligação entre os input e a class do component, tem que ligala na class, pois essa "diretiva" pertence a "FormsModule" então temos que importala para ser usada
+
