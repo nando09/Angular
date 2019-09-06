@@ -1,44 +1,48 @@
 {
-	"heroes": [
-			{
-				"id": 11,
-				"nome": "Dr Nice" 
-			},
-			{
-				"id": 12,
-				"nome": "Narco" 
-			},
-			{
-				"id": 13,
-				"nome": "Bombasto" 
-			},
-			{
-				"id": 14,
-				"nome": "Celeritas" 
-			},
-			{
-				"id": 15,
-				"nome": "Magneta" 
-			},
-			{
-				"id": 16,
-				"nome": "RubberMan" 
-			},
-			{
-				"id": 17,
-				"nome": "Dynama" 
-			},
-			{
-				"id": 18,
-				"nome": "Dr IQ" 
-			},
-			{
-				"id": 19,
-				"nome": "Magma" 
-			},
-			{
-				"id": 20,
-				"nome": "Tornado"
-			}
-	]
+  "heroes": [
+    {
+      "id": 1,
+      "nome": "Tempestade"
+    },
+    {
+      "id": 2,
+      "nome": "Noturno"
+    },
+    {
+      "id": 3,
+      "nome": "Linsenegra"
+    },
+    {
+      "id": 4,
+      "nome": "Vampira"
+    },
+    {
+      "id": 5,
+      "nome": "Ciclope"
+    },
+    {
+      "id": 6,
+      "nome": "Volwerine"
+    },
+    {
+      "id": 7,
+      "nome": "Fera"
+    },
+    {
+      "id": 8,
+      "nome": "Dr Xavier"
+    },
+    {
+      "id": 9,
+      "nome": "Mercurio"
+    },
+    {
+      "id": 10,
+      "nome": "Avalanche"
+    },
+    {
+      "nome": "Jaqueline",
+      "id": 11
+    }
+  ]
 }
